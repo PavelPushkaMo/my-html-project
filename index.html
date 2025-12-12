@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Пример семантической верстки сайта">
+    
+    <title>Мой семантический сайт</title>
+    
+    <!-- Фавиконка -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    
+    <!-- Подключение CSS (будет в следующем занятии) -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Подключение шрифтов (пример) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <!-- Логотип -->
+            <a href="/" class="logo">
+                <img src="assets/img/logo.png" alt="Логотип компании" width="150" height="40">
+            </a>
+            
+            <!-- Основная навигация -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link">Главная</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">О нас</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Услуги</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Портфолио</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Кнопка для мобильного меню (опционально) -->
+            <button class="menu-toggle" aria-label="Открыть меню">
+                <span class="menu-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="main">
+        <!-- Секция 1: Герой -->
+        <section class="hero" id="home">
+            <div class="container">
+                <h1 class="hero-title">Добро пожаловать на наш сайт</h1>
+                <p class="hero-text">Мы создаем современные и функциональные веб-решения с использованием семантической верстки.</p>
+                <a href="#contact" class="button">Связаться с нами</a>
+            </div>
+        </section>
+
+        <!-- Секция 2: О нас -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">О нашей компании</h2>
+                <div class="about-content">
+                    <article class="about-card">
+                        <h3>Наша миссия</h3>
+                        <p>Мы стремимся создавать качественные цифровые продукты, которые решают реальные проблемы пользователей и бизнеса.</p>
+                    </article>
+                    
+                    <article class="about-card">
+                        <h3>Наши ценности</h3>
+                        <p>Качество, инновации, клиентоориентированность и профессиональный подход — основа нашей работы.</p>
+                    </article>
+                    
+                    <article class="about-card">
+                        <h3>Наша команда</h3>
+                        <p>В нашей команде работают опытные разработчики, дизайнеры и менеджеры проектов.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция 3: Услуги -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-title">Наши услуги</h2>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <img src="assets/img/web-dev.jpg" alt="Веб-разработка" width="300" height="200">
+                        <h3>Веб-разработка</h3>
+                        <p>Создание современных веб-сайтов и веб-приложений с использованием передовых технологий.</p>
+                        <a href="#" class="service-link">Подробнее →</a>
+                    </article>
+                    
+                    <article class="service-card">
+                        <img src="assets/img/design.jpg" alt="Дизайн интерфейсов" width="300" height="200">
+                        <h3>UI/UX Дизайн</h3>
+                        <p>Разработка интуитивно понятных и эстетичных интерфейсов для цифровых продуктов.</p>
+                        <a href="#" class="service-link">Подробнее →</a>
+                    </article>
+                    
+                    <article class="service-card">
+                        <img src="assets/img/seo.jpg" alt="SEO оптимизация" width="300" height="200">
+                        <h3>SEO Оптимизация</h3>
+                        <p>Повышение видимости вашего сайта в поисковых системах и привлечение целевой аудитории.</p>
+                        <a href="#" class="service-link">Подробнее →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Боковая панель (если требуется по макету) -->
+        <aside class="sidebar">
+            <div class="container">
+                <h2>Последние новости</h2>
+                <article class="news-item">
+                    <h3>Новый проект запущен</h3>
+                    <p>Мы завершили разработку сайта для крупной розничной сети.</p>
+                    <time datetime="2024-01-15">15 января 2024</time>
+                </article>
+                <article class="news-item">
+                    <h3>Обновление технологий</h3>
+                    <p>Перешли на использование React 18 в наших проектах.</p>
+                    <time datetime="2024-01-10">10 января 2024</time>
+                </article>
+            </div>
+        </aside>
+
+        <!-- Секция 4: Контакты -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Свяжитесь с нами</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Контактная информация</h3>
+                        <address>
+                            <p>📍 Москва, ул. Примерная, д. 123</p>
+                            <p>📞 <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                            <p>✉️ <a href="mailto:info@example.com">info@example.com</a></p>
+                        </address>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Отправить сообщение</h3>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label for="name">Имя</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Сообщение</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="button">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/img/logo.png" alt="Логотип" width="120" height="30">
+                    <p>Создаем будущее веба сегодня</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#portfolio">Портфолио</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Мы в соцсетях</h3>
+                    <ul class="social-list">
+                        <li><a href="#" aria-label="ВКонтакте">VK</a></li>
+                        <li><a href="#" aria-label="Telegram">TG</a></li>
+                        <li><a href="#" aria-label="GitHub">GH</a></li>
+                        <li><a href="#" aria-label="YouTube">YT</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Мой семантический сайт. Все права защищены.</p>
+                <p>Сверстано с использованием HTML5 и семантических тегов.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
