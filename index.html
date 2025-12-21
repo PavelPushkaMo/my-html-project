@@ -3,45 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Пример семантической верстки сайта">
+    <meta name="description" content="Веб-студия с семантической версткой и современным CSS">
     
-    <title>Мой семантический сайт</title>
+    <title>WebStudio Pro | Современная веб-разработка</title>
     
     <!-- Фавиконка -->
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
     
-    <!-- Подключение CSS (будет в следующем занятии) -->
+    <!-- Подключение CSS -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- Подключение шрифтов (пример) -->
+    <!-- Подключение шрифтов Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Шапка сайта -->
     <header class="header">
-        <div class="container">
+        <div class="container header__container">
             <!-- Логотип -->
-            <a href="/" class="logo">
-                <img src="assets/img/logo.png" alt="Логотип компании" width="150" height="40">
+            <a href="/" class="header__logo">
+                <img src="assets/img/logo.png" alt="WebStudio Pro - Логотип компании" class="header__logo-image" width="150" height="40">
             </a>
             
             <!-- Основная навигация -->
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#home" class="nav-link">Главная</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">О нас</a></li>
-                    <li class="nav-item"><a href="#services" class="nav-link">Услуги</a></li>
-                    <li class="nav-item"><a href="#portfolio" class="nav-link">Портфолио</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link nav__link--active">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">О нас</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">Услуги</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">Портфолио</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Контакты</a>
+                    </li>
                 </ul>
+                
+                <!-- Кнопка для мобильного меню -->
+                <button class="header__menu-toggle" aria-label="Открыть меню" id="menuToggle">
+                    <span class="menu-icon"></span>
+                </button>
             </nav>
-            
-            <!-- Кнопка для мобильного меню (опционально) -->
-            <button class="menu-toggle" aria-label="Открыть меню">
-                <span class="menu-icon"></span>
-            </button>
         </div>
     </header>
 
@@ -49,112 +59,117 @@
     <main class="main">
         <!-- Секция 1: Герой -->
         <section class="hero" id="home">
-            <div class="container">
-                <h1 class="hero-title">Добро пожаловать на наш сайт</h1>
-                <p class="hero-text">Мы создаем современные и функциональные веб-решения с использованием семантической верстки.</p>
-                <a href="#contact" class="button">Связаться с нами</a>
+            <div class="container hero__container">
+                <h1 class="hero__title fade-in">Создаем цифровые решения для вашего бизнеса</h1>
+                <p class="hero__text fade-in">Мы разрабатываем современные и функциональные веб-продукты с использованием семантической верстки и прогрессивных технологий.</p>
+                <a href="#contact" class="button button--primary">Начать проект</a>
             </div>
         </section>
 
         <!-- Секция 2: О нас -->
-        <section class="about" id="about">
+        <section class="section" id="about">
             <div class="container">
-                <h2 class="section-title">О нашей компании</h2>
-                <div class="about-content">
-                    <article class="about-card">
-                        <h3>Наша миссия</h3>
-                        <p>Мы стремимся создавать качественные цифровые продукты, которые решают реальные проблемы пользователей и бизнеса.</p>
+                <h2 class="section__title">О нашей компании</h2>
+                <div class="about__content">
+                    <article class="about-card fade-in">
+                        <h3 class="about-card__title">Наша миссия</h3>
+                        <p class="about-card__text">Мы стремимся создавать качественные цифровые продукты, которые решают реальные проблемы пользователей и помогают бизнесу расти в онлайн-среде.</p>
                     </article>
                     
-                    <article class="about-card">
-                        <h3>Наши ценности</h3>
-                        <p>Качество, инновации, клиентоориентированность и профессиональный подход — основа нашей работы.</p>
+                    <article class="about-card fade-in">
+                        <h3 class="about-card__title">Наши ценности</h3>
+                        <p class="about-card__text">Качество, инновации, клиентоориентированность и профессиональный подход — фундаментальные принципы нашей работы.</p>
                     </article>
                     
-                    <article class="about-card">
-                        <h3>Наша команда</h3>
-                        <p>В нашей команде работают опытные разработчики, дизайнеры и менеджеры проектов.</p>
+                    <article class="about-card fade-in">
+                        <h3 class="about-card__title">Наша команда</h3>
+                        <p class="about-card__text">В нашей команде работают опытные фронтенд и бэкенд разработчики, UX/UI дизайнеры и менеджеры проектов.</p>
                     </article>
                 </div>
             </div>
         </section>
 
         <!-- Секция 3: Услуги -->
-        <section class="services" id="services">
+        <section class="section section--light" id="services">
             <div class="container">
-                <h2 class="section-title">Наши услуги</h2>
-                <div class="services-grid">
-                    <article class="service-card">
-                        <img src="assets/img/web-dev.jpg" alt="Веб-разработка" width="300" height="200">
-                        <h3>Веб-разработка</h3>
-                        <p>Создание современных веб-сайтов и веб-приложений с использованием передовых технологий.</p>
-                        <a href="#" class="service-link">Подробнее →</a>
+                <h2 class="section__title">Наши услуги</h2>
+                <div class="services__grid">
+                    <article class="service-card fade-in">
+                        <img src="assets/img/web-dev.jpg" alt="Веб-разработка" class="service-card__image" width="300" height="200">
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Веб-разработка</h3>
+                            <p class="service-card__text">Создание современных веб-сайтов и веб-приложений с использованием передовых технологий: HTML5, CSS3, JavaScript, React и Vue.js.</p>
+                            <a href="#" class="service-card__link">Подробнее о разработке</a>
+                        </div>
                     </article>
                     
-                    <article class="service-card">
-                        <img src="assets/img/design.jpg" alt="Дизайн интерфейсов" width="300" height="200">
-                        <h3>UI/UX Дизайн</h3>
-                        <p>Разработка интуитивно понятных и эстетичных интерфейсов для цифровых продуктов.</p>
-                        <a href="#" class="service-link">Подробнее →</a>
+                    <article class="service-card fade-in">
+                        <img src="assets/img/design.jpg" alt="Дизайн интерфейсов" class="service-card__image" width="300" height="200">
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">UI/UX Дизайн</h3>
+                            <p class="service-card__text">Разработка интуитивно понятных и эстетичных интерфейсов для цифровых продуктов с фокусом на пользовательский опыт.</p>
+                            <a href="#" class="service-card__link">Подробнее о дизайне</a>
+                        </div>
                     </article>
                     
-                    <article class="service-card">
-                        <img src="assets/img/seo.jpg" alt="SEO оптимизация" width="300" height="200">
-                        <h3>SEO Оптимизация</h3>
-                        <p>Повышение видимости вашего сайта в поисковых системах и привлечение целевой аудитории.</p>
-                        <a href="#" class="service-link">Подробнее →</a>
+                    <article class="service-card fade-in">
+                        <img src="assets/img/seo.jpg" alt="SEO оптимизация" class="service-card__image" width="300" height="200">
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">SEO Оптимизация</h3>
+                            <p class="service-card__text">Повышение видимости вашего сайта в поисковых системах и привлечение целевой аудитории через комплексное продвижение.</p>
+                            <a href="#" class="service-card__link">Подробнее о SEO</a>
+                        </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Боковая панель (если требуется по макету) -->
-        <aside class="sidebar">
-            <div class="container">
-                <h2>Последние новости</h2>
-                <article class="news-item">
-                    <h3>Новый проект запущен</h3>
-                    <p>Мы завершили разработку сайта для крупной розничной сети.</p>
-                    <time datetime="2024-01-15">15 января 2024</time>
-                </article>
-                <article class="news-item">
-                    <h3>Обновление технологий</h3>
-                    <p>Перешли на использование React 18 в наших проектах.</p>
-                    <time datetime="2024-01-10">10 января 2024</time>
-                </article>
-            </div>
+        <!-- Боковая панель с новостями -->
+        <aside class="sidebar container">
+            <h2 class="sidebar__title">Последние новости</h2>
+            <article class="news-item">
+                <h3 class="news-item__title">Новый проект запущен</h3>
+                <p class="news-item__text">Мы завершили разработку корпоративного сайта для крупной розничной сети с интеграцией CRM-системы.</p>
+                <time class="news-item__time" datetime="2024-01-15">15 января 2024</time>
+            </article>
+            <article class="news-item">
+                <h3 class="news-item__title">Обновление технологического стека</h3>
+                <p class="news-item__text">Перешли на использование React 18 и Next.js 14 в наших проектах для улучшения производительности.</p>
+                <time class="news-item__time" datetime="2024-01-10">10 января 2024</time>
+            </article>
         </aside>
 
         <!-- Секция 4: Контакты -->
-        <section class="contact" id="contact">
+        <section class="section" id="contact">
             <div class="container">
-                <h2 class="section-title">Свяжитесь с нами</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3>Контактная информация</h3>
-                        <address>
-                            <p>📍 Москва, ул. Примерная, д. 123</p>
-                            <p>📞 <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
-                            <p>✉️ <a href="mailto:info@example.com">info@example.com</a></p>
+                <h2 class="section__title">Свяжитесь с нами</h2>
+                <div class="contact__content">
+                    <div class="contact-info fade-in">
+                        <h3 class="contact-info__title">Контактная информация</h3>
+                        <address class="contact-info__address">
+                            <p>📍 Москва, ул. Примерная, д. 123, БЦ "Дизайн"</p>
+                            <p>📞 <a href="tel:+79991234567" class="contact-info__link">+7 (999) 123-45-67</a></p>
+                            <p>✉️ <a href="mailto:info@webstudiopro.ru" class="contact-info__link">info@webstudiopro.ru</a></p>
+                            <p>🕐 Пн-Пт: 9:00-18:00</p>
                         </address>
                     </div>
                     
-                    <div class="contact-form">
-                        <h3>Отправить сообщение</h3>
-                        <form action="#" method="post">
+                    <div class="contact-form fade-in">
+                        <h3 class="contact-form__title">Отправить сообщение</h3>
+                        <form action="#" method="post" class="contact-form__form">
                             <div class="form-group">
-                                <label for="name">Имя</label>
-                                <input type="text" id="name" name="name" required>
+                                <label for="name" class="form-group__label">Ваше имя</label>
+                                <input type="text" id="name" name="name" class="form-group__input" required>
                             </div>
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
+                                <label for="email" class="form-group__label">Email</label>
+                                <input type="email" id="email" name="email" class="form-group__input" required>
                             </div>
                             <div class="form-group">
-                                <label for="message">Сообщение</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <label for="message" class="form-group__label">Сообщение</label>
+                                <textarea id="message" name="message" class="form-group__textarea" rows="5" required></textarea>
                             </div>
-                            <button type="submit" class="button">Отправить</button>
+                            <button type="submit" class="button button--primary">Отправить сообщение</button>
                         </form>
                     </div>
                 </div>
@@ -165,38 +180,95 @@
     <!-- Подвал сайта -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer__content">
                 <div class="footer-logo">
-                    <img src="assets/img/logo.png" alt="Логотип" width="120" height="30">
-                    <p>Создаем будущее веба сегодня</p>
+                    <img src="assets/img/logo.png" alt="WebStudio Pro" class="footer-logo__image" width="120" height="30">
+                    <p class="footer-logo__text">Создаем будущее веба сегодня</p>
                 </div>
                 
                 <div class="footer-links">
-                    <h3>Быстрые ссылки</h3>
-                    <ul>
-                        <li><a href="#home">Главная</a></li>
-                        <li><a href="#about">О нас</a></li>
-                        <li><a href="#services">Услуги</a></li>
-                        <li><a href="#portfolio">Портфолио</a></li>
+                    <h3 class="footer-links__title">Быстрые ссылки</h3>
+                    <ul class="footer-links__list">
+                        <li class="footer-links__item"><a href="#home" class="footer-links__link">Главная</a></li>
+                        <li class="footer-links__item"><a href="#about" class="footer-links__link">О нас</a></li>
+                        <li class="footer-links__item"><a href="#services" class="footer-links__link">Услуги</a></li>
+                        <li class="footer-links__item"><a href="#portfolio" class="footer-links__link">Портфолио</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-social">
-                    <h3>Мы в соцсетях</h3>
-                    <ul class="social-list">
-                        <li><a href="#" aria-label="ВКонтакте">VK</a></li>
-                        <li><a href="#" aria-label="Telegram">TG</a></li>
-                        <li><a href="#" aria-label="GitHub">GH</a></li>
-                        <li><a href="#" aria-label="YouTube">YT</a></li>
+                    <h3 class="footer-social__title">Мы в соцсетях</h3>
+                    <ul class="footer-social__list">
+                        <li class="footer-social__item">
+                            <a href="#" class="footer-social__link" aria-label="ВКонтакте">VK</a>
+                        </li>
+                        <li class="footer-social__item">
+                            <a href="#" class="footer-social__link" aria-label="Telegram">TG</a>
+                        </li>
+                        <li class="footer-social__item">
+                            <a href="#" class="footer-social__link" aria-label="GitHub">GH</a>
+                        </li>
+                        <li class="footer-social__item">
+                            <a href="#" class="footer-social__link" aria-label="YouTube">YT</a>
+                        </li>
                     </ul>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; 2024 Мой семантический сайт. Все права защищены.</p>
-                <p>Сверстано с использованием HTML5 и семантических тегов.</p>
+            <div class="footer__bottom">
+                <p>&copy; 2024 WebStudio Pro. Все права защищены.</p>
+                <p>Сверстано с использованием HTML5, CSS3 и методологии БЭМ.</p>
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript для мобильного меню (минимальный) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navList = document.querySelector('.nav__list');
+            
+            if (menuToggle && navList) {
+                menuToggle.addEventListener('click', function() {
+                    navList.classList.toggle('nav__list--open');
+                    
+                    // Анимация иконки меню
+                    const menuIcon = document.querySelector('.menu-icon');
+                    if (navList.classList.contains('nav__list--open')) {
+                        menuIcon.style.backgroundColor = 'transparent';
+                        menuIcon.style.transform = 'rotate(45deg)';
+                        menuIcon.querySelector('::before').style.transform = 'rotate(90deg) translate(6px, 0)';
+                        menuIcon.querySelector('::after').style.transform = 'rotate(90deg) translate(-6px, 0)';
+                    } else {
+                        menuIcon.style.backgroundColor = '';
+                        menuIcon.style.transform = '';
+                    }
+                });
+            }
+            
+            // Плавная прокрутка для якорных ссылок
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Закрыть мобильное меню если открыто
+                        if (navList.classList.contains('nav__list--open')) {
+                            navList.classList.remove('nav__list--open');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
