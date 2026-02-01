@@ -8,11 +8,19 @@
     
     <title>WebStudio Pro | Современная веб-разработка</title>
     
+    <!-- Предзагрузка критического шрифта -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Фолбэк для браузеров без поддержки JavaScript -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    </noscript>
+    
     <!-- Фавиконка -->
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
     
     <!-- Подключение CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-mobile-first.css" media="print" onload="this.media='all'">
     
     <!-- Подключение шрифтов Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
