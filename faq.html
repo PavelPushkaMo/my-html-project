@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Часто задаваемые вопросы о WebStudio Pro - ответы на популярные вопросы о разработке, дизайне и SEO">
+    <title>WebStudio Pro | FAQ</title>
+    
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- Дополнительные стили -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Хедер (такой же) -->
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <span class="has-text-weight-bold is-size-4 has-text-primary">WebStudio</span>
+                    <span class="has-text-weight-bold is-size-4">Pro</span>
+                </a>
+                
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasic" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="index.html" class="navbar-item">Главная</a>
+                    <a href="index.html#services" class="navbar-item">Услуги</a>
+                    <a href="index.html#portfolio" class="navbar-item">Портфолио</a>
+                    <a href="index.html#about" class="navbar-item">О нас</a>
+                    <a href="index.html#reviews" class="navbar-item">Отзывы</a>
+                    <a href="faq.html" class="navbar-item is-active" aria-current="page">FAQ</a>
+                    <a href="contacts.html" class="navbar-item">Контакты</a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a href="contacts.html" class="button is-primary">
+                                <strong>Связаться</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Заголовок страницы -->
+        <section class="hero is-light">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title is-1">Часто задаваемые вопросы</h1>
+                    <p class="subtitle is-4">Ответы на популярные вопросы о нашей работе</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ секция -->
+        <section class="section">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-8">
+                        <!-- Категории вопросов -->
+                        <div class="tabs is-toggle is-centered mb-6">
+                            <ul>
+                                <li class="is-active" data-tab="all"><a>Все вопросы</a></li>
+                                <li data-tab="development"><a>Разработка</a></li>
+                                <li data-tab="design"><a>Дизайн</a></li>
+                                <li data-tab="seo"><a>SEO</a></li>
+                                <li data-tab="business"><a>Сотрудничество</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Аккордеон FAQ -->
+                        <div class="faq-container">
+                            <!-- Категория: Разработка -->
+                            <div class="faq-category" data-category="development">
+                                <h2 class="title is-4 mb-4 has-text-primary">Разработка</h2>
+                                
+                                <!-- Вопрос 1 -->
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>Сколько времени занимает разработка сайта?</span>
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <div class="content">
+                                            <p>Сроки разработки зависят от сложности проекта:</p>
+                                            <ul>
+                                                <li><strong>Сайт-визитка / лендинг:</strong> 2-4 недели</li>
+                                                <li><strong>Корпоративный сайт:</strong> 4-8 недель</li>
+                                                <li><strong>Интернет-магазин:</strong> 8-12 недель</li>
+                                                <li><strong>Индивидуальные веб-приложения:</strong> от 12 недель</li>
+                                            </ul>
+                                            <p>Точные сроки обсуждаются после анализа вашего технического задания.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Вопрос 2 -->
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>Какие технологии вы используете?</span>
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <div class="content">
+                                            <p>Мы используем современный стек технологий:</p>
+                                            <ul>
+                                                <li><strong>Фронтенд:</strong> HTML5, CSS3, JavaScript, React, Vue.js</li>
+                                                <li><strong>Бэкенд:</strong> Node.js, PHP, Python</li>
+                                                <li><strong>Базы данных:</strong> MySQL, PostgreSQL, MongoDB</li>
+                                                <li><strong>CMS:</strong> WordPress, 1C-Битрикс, ModX</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Вопрос 3 -->
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>Предоставляете ли вы хостинг?</span>
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <div class="content">
+                                            <p>Мы не предоставляем хостинг напрямую, но помогаем с выбором надежного провайдера и настройкой сервера. Также мы можем включить техническую поддержку хостинга в абонентское обслуживание.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Категория: Дизайн -->
+                            <div class="faq-category" data-category="design">
+                                <h2 class="title is-4 mb-4 mt-6 has-text-primary">Дизайн</h2>
+                                
+                                <!-- Вопрос 4 -->
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>Сколько макетов вы делаете?</span>
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <div class="content">
+                                            <p>Обычно мы разрабатываем 2-3 варианта главной страницы для утверждения стиля, затем отрисовываем все внутренние страницы. В процессе работы предусмотрено 2 бесплатных круга правок.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Вопрос 5 -->
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>Включаете ли вы адаптивную верстку?</span>
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <div class="content">
+                                            <p>Да, все наши сайты разрабатываются с учетом мобильных устройств и планшетов. Адаптивная верстка включена в стоимость разработки.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Категория: SEO -->
+                            <div class="faq-category" data-category="seo">
+                                <h2 class="title is-4 mb-4 mt-6 has-text-primary">SEO</h2>
+                                
+                                <!-- Вопрос 6 -->
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>Чем отличается SEO-аудит от SEO-продвижения?</span>
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <div class="content">
+                                            <p><strong>SEO-аудит</strong> — это разовая услуга по анализу текущего состояния сайта и выявлению проблем, влияющих на позиции в поиске.</p>
+                                            <p><strong>SEO-продвижение</strong> — это комплексная ежемесячная работа по улучшению позиций сайта, включающая оптимизацию контента, работу со ссылочной массой и техническую поддержку.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Вопрос 7 -->
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>Когда будут видны первые результаты?</span>
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <div class="content">
+                                            <p>Первые улучшения обычно заметны через 2-4 месяца работы. Для выхода в ТОП по высокочастотным запросам может потребоваться 6-12 месяцев.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Категория: Сотрудничество -->
+                            <div class="faq-category" data-category="business">
+                                <h2 class="title is-4 mb-4 mt-6 has-text-primary">Сотрудничество</h2>
+                                
+                                <!-- Вопрос 8 -->
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>Как происходит оплата?</span>
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <div class="content">
+                                            <p>Мы работаем по предоплате 50% для старта проекта. Оставшиеся 50% выплачиваются после завершения работ и подписания акта. Для долгосрочных проектов возможна помесячная оплата.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Вопрос 9 -->
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>Предоставляете ли вы гарантию?</span>
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <div class="content">
+                                            <p>Да, мы предоставляем гарантию на разработанный код — 3 месяца бесплатного исправления ошибок. Также возможно заключение договора на техническую поддержку после завершения проекта.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Вопрос 10 -->
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>Можно ли заказать только дизайн без разработки?</span>
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <div class="content">
+                                            <p>Да, мы предоставляем услугу "только дизайн". Вы получаете макеты в Figma, которые затем можете передать своим разработчикам или реализовать на любой CMS.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Дополнительный блок -->
+                        <div class="box has-background-primary-light mt-6 has-text-centered">
+                            <h3 class="title is-4 mb-3">Остались вопросы?</h3>
+                            <p class="mb-4">Не нашли ответ на свой вопрос? Свяжитесь с нами — мы с радостью поможем!</p>
+                            <a href="contacts.html" class="button is-primary is-large">
+                                <span class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <span>Задать вопрос</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ФУТЕР (такой же) -->
+    <footer class="footer has-background-dark has-text-white">
+        <!-- ... (тот же футер) ... -->
+        <div class="container">
+            <div class="columns">
+                <div class="column is-4">
+                    <h4 class="title is-4 has-text-white">WebStudio Pro</h4>
+                    <p class="has-text-grey-light">Создаем цифровые решения для вашего бизнеса с 2015 года.</p>
+                </div>
+                <div class="column is-2">
+                    <h5 class="title is-6 has-text-white">Навигация</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="has-text-grey-light">Главная</a></li>
+                        <li><a href="index.html#services" class="has-text-grey-light">Услуги</a></li>
+                        <li><a href="index.html#portfolio" class="has-text-grey-light">Портфолио</a></li>
+                        <li><a href="index.html#about" class="has-text-grey-light">О нас</a></li>
+                        <li><a href="faq.html" class="has-text-grey-light">FAQ</a></li>
+                        <li><a href="contacts.html" class="has-text-grey-light">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="column is-3">
+                    <h5 class="title is-6 has-text-white">Контакты</h5>
+                    <address class="has-text-grey-light">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Москва, ул. Примерная, 123</p>
+                        <p><i class="fas fa-phone mr-2"></i> <a href="tel:+79991234567" class="has-text-grey-light">+7 (999) 123-45-67</a></p>
+                        <p><i class="fas fa-envelope mr-2"></i> <a href="mailto:info@webstudiopro.ru" class="has-text-grey-light">info@webstudiopro.ru</a></p>
+                    </address>
+                </div>
+                <div class="column is-3">
+                    <h5 class="title is-6 has-text-white">Мы в соцсетях</h5>
+                    <div class="buttons">
+                        <a href="#" class="button is-small is-dark" aria-label="VK">
+                            <span class="icon">
+                                <i class="fab fa-vk"></i>
+                            </span>
+                        </a>
+                        <a href="#" class="button is-small is-dark" aria-label="Telegram">
+                            <span class="icon">
+                                <i class="fab fa-telegram"></i>
+                            </span>
+                        </a>
+                        <a href="#" class="button is-small is-dark" aria-label="GitHub">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="has-background-grey">
+            <div class="has-text-centered has-text-grey-light">
+                <p>&copy; 2025 WebStudio Pro. Все права защищены.</p>
+                <p class="is-size-7">
+                    <a href="404.html" class="has-text-grey-light">Страница 404 для теста</a> • 
+                    <a href="#" class="has-text-grey-light">Политика конфиденциальности</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <button id="scrollToTop" class="button is-primary is-rounded" aria-label="Наверх">
+        <span class="icon">
+            <i class="fas fa-arrow-up"></i>
+        </span>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Бургер-меню
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.querySelector('.navbar-menu');
+            
+            if (burger && menu) {
+                burger.addEventListener('click', () => {
+                    burger.classList.toggle('is-active');
+                    menu.classList.toggle('is-active');
+                });
+            }
+
+            // Кнопка "Наверх"
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            
+            if (scrollToTopBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        scrollToTopBtn.style.display = 'block';
+                    } else {
+                        scrollToTopBtn.style.display = 'none';
+                    }
+                });
+
+                scrollToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Аккордеон FAQ
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    question.classList.toggle('active');
+                    answer.classList.toggle('show');
+                });
+            });
+
+            // Фильтрация по категориям
+            const tabs = document.querySelectorAll('.tabs li');
+            const categories = document.querySelectorAll('.faq-category');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Убираем активный класс у всех табов
+                    tabs.forEach(t => t.classList.remove('is-active'));
+                    
+                    // Добавляем активный класс текущему табу
+                    tab.classList.add('is-active');
+                    
+                    const filter = tab.dataset.tab;
+                    
+                    if (filter === 'all') {
+                        categories.forEach(cat => cat.style.display = 'block');
+                    } else {
+                        categories.forEach(cat => {
+                            if (cat.dataset.category === filter) {
+                                cat.style.display = 'block';
+                            } else {
+                                cat.style.display = 'none';
+                            }
+                        });
+                    }
+                });
+            });
+
+            // Открыть первый вопрос для примера
+            const firstQuestion = document.querySelector('.faq-question');
+            if (firstQuestion) {
+                firstQuestion.click();
+            }
+        });
+    </script>
+
+</body>
+</html>

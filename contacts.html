@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Свяжитесь с WebStudio Pro - форма обратной связи, контакты, адрес">
+    <title>WebStudio Pro | Контакты</title>
+    
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- Дополнительные стили -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Хедер (такой же как на главной) -->
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <span class="has-text-weight-bold is-size-4 has-text-primary">WebStudio</span>
+                    <span class="has-text-weight-bold is-size-4">Pro</span>
+                </a>
+                
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasic" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="index.html" class="navbar-item">Главная</a>
+                    <a href="index.html#services" class="navbar-item">Услуги</a>
+                    <a href="index.html#portfolio" class="navbar-item">Портфолио</a>
+                    <a href="index.html#about" class="navbar-item">О нас</a>
+                    <a href="index.html#reviews" class="navbar-item">Отзывы</a>
+                    <a href="faq.html" class="navbar-item">FAQ</a>
+                    <a href="contacts.html" class="navbar-item is-active" aria-current="page">Контакты</a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a href="contacts.html" class="button is-primary">
+                                <strong>Связаться</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Заголовок страницы -->
+        <section class="hero is-light">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title is-1">Свяжитесь с нами</h1>
+                    <p class="subtitle is-4">Мы всегда рады новым проектам и интересным задачам</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма обратной связи и контакты -->
+        <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <!-- Форма обратной связи -->
+                    <div class="column is-6">
+                        <div class="box">
+                            <h2 class="title is-3 mb-5">Отправить сообщение</h2>
+                            
+                            <form id="contactForm" action="#" method="post">
+                                <!-- Имя -->
+                                <div class="field">
+                                    <label class="label">Ваше имя <span class="has-text-danger">*</span></label>
+                                    <div class="control has-icons-left">
+                                        <input class="input" type="text" placeholder="Иван Иванов" id="name" required>
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="field">
+                                    <label class="label">Email <span class="has-text-danger">*</span></label>
+                                    <div class="control has-icons-left">
+                                        <input class="input" type="email" placeholder="ivan@example.com" id="email" required>
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- Тема (выпадающий список) -->
+                                <div class="field">
+                                    <label class="label">Тема обращения <span class="has-text-danger">*</span></label>
+                                    <div class="control">
+                                        <div class="select is-fullwidth">
+                                            <select id="subject" required>
+                                                <option value="" disabled selected>Выберите тему</option>
+                                                <option value="project">Хочу заказать проект</option>
+                                                <option value="question">Вопрос по услугам</option>
+                                                <option value="cooperation">Предложение о сотрудничестве</option>
+                                                <option value="other">Другое</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Сообщение -->
+                                <div class="field">
+                                    <label class="label">Сообщение <span class="has-text-danger">*</span></label>
+                                    <div class="control">
+                                        <textarea class="textarea" placeholder="Опишите ваш проект или задайте вопрос..." id="message" rows="6" required></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Чекбокс согласия -->
+                                <div class="field">
+                                    <div class="control">
+                                        <label class="checkbox">
+                                            <input type="checkbox" id="consent" required>
+                                            Я согласен на обработку <a href="#">персональных данных</a>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Кнопка отправки -->
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-primary is-large is-fullwidth" type="submit">
+                                            <span class="icon">
+                                                <i class="fas fa-paper-plane"></i>
+                                            </span>
+                                            <span>Отправить сообщение</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            <!-- Сообщение об успешной отправке (скрыто по умолчанию) -->
+                            <div id="successMessage" class="notification is-success is-hidden mt-4">
+                                <button class="delete"></button>
+                                <strong>Спасибо!</strong> Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Контактная информация и карта -->
+                    <div class="column is-6">
+                        <!-- Контактная информация -->
+                        <div class="box">
+                            <h2 class="title is-3 mb-5">Контактная информация</h2>
+                            
+                            <div class="content">
+                                <p>
+                                    <span class="icon has-text-primary mr-3">
+                                        <i class="fas fa-map-marker-alt fa-lg"></i>
+                                    </span>
+                                    <strong>Адрес:</strong> Москва, ул. Примерная, д. 123, БЦ "Дизайн", офис 456
+                                </p>
+                                <p>
+                                    <span class="icon has-text-primary mr-3">
+                                        <i class="fas fa-phone-alt fa-lg"></i>
+                                    </span>
+                                    <strong>Телефон:</strong> <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                                </p>
+                                <p>
+                                    <span class="icon has-text-primary mr-3">
+                                        <i class="fas fa-envelope fa-lg"></i>
+                                    </span>
+                                    <strong>Email:</strong> <a href="mailto:info@webstudiopro.ru">info@webstudiopro.ru</a>
+                                </p>
+                                <p>
+                                    <span class="icon has-text-primary mr-3">
+                                        <i class="fas fa-clock fa-lg"></i>
+                                    </span>
+                                    <strong>Режим работы:</strong> Пн-Пт: 9:00-18:00, Сб-Вс: выходной
+                                </p>
+                            </div>
+
+                            <hr>
+
+                            <!-- Социальные сети -->
+                            <h3 class="title is-5 mb-3">Мы в социальных сетях</h3>
+                            <div class="buttons">
+                                <a href="#" class="button is-medium is-dark">
+                                    <span class="icon">
+                                        <i class="fab fa-vk fa-lg"></i>
+                                    </span>
+                                    <span>VK</span>
+                                </a>
+                                <a href="#" class="button is-medium is-dark">
+                                    <span class="icon">
+                                        <i class="fab fa-telegram fa-lg"></i>
+                                    </span>
+                                    <span>Telegram</span>
+                                </a>
+                                <a href="#" class="button is-medium is-dark">
+                                    <span class="icon">
+                                        <i class="fab fa-github fa-lg"></i>
+                                    </span>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Карта -->
+                        <div class="box mt-5">
+                            <h3 class="title is-4 mb-3">Как нас найти</h3>
+                            <div class="map-container">
+                                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aaa40b5f7a5cc7f8a9c5a5d5e8f5a0d8f7a6b9c8d7e6f5a4b3c2d1e0f1a2b3c4&amp;source=constructor" allowfullscreen></iframe>
+                            </div>
+                            <p class="help mt-2">* Яндекс.Карты. Москва, ул. Примерная, 123</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ФУТЕР (такой же как на главной) -->
+    <footer class="footer has-background-dark has-text-white">
+        <!-- ... (тот же футер, что в index.html) ... -->
+        <div class="container">
+            <div class="columns">
+                <div class="column is-4">
+                    <h4 class="title is-4 has-text-white">WebStudio Pro</h4>
+                    <p class="has-text-grey-light">Создаем цифровые решения для вашего бизнеса с 2015 года.</p>
+                </div>
+                <div class="column is-2">
+                    <h5 class="title is-6 has-text-white">Навигация</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="has-text-grey-light">Главная</a></li>
+                        <li><a href="index.html#services" class="has-text-grey-light">Услуги</a></li>
+                        <li><a href="index.html#portfolio" class="has-text-grey-light">Портфолио</a></li>
+                        <li><a href="index.html#about" class="has-text-grey-light">О нас</a></li>
+                        <li><a href="faq.html" class="has-text-grey-light">FAQ</a></li>
+                        <li><a href="contacts.html" class="has-text-grey-light">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="column is-3">
+                    <h5 class="title is-6 has-text-white">Контакты</h5>
+                    <address class="has-text-grey-light">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Москва, ул. Примерная, 123</p>
+                        <p><i class="fas fa-phone mr-2"></i> <a href="tel:+79991234567" class="has-text-grey-light">+7 (999) 123-45-67</a></p>
+                        <p><i class="fas fa-envelope mr-2"></i> <a href="mailto:info@webstudiopro.ru" class="has-text-grey-light">info@webstudiopro.ru</a></p>
+                    </address>
+                </div>
+                <div class="column is-3">
+                    <h5 class="title is-6 has-text-white">Мы в соцсетях</h5>
+                    <div class="buttons">
+                        <a href="#" class="button is-small is-dark" aria-label="VK">
+                            <span class="icon">
+                                <i class="fab fa-vk"></i>
+                            </span>
+                        </a>
+                        <a href="#" class="button is-small is-dark" aria-label="Telegram">
+                            <span class="icon">
+                                <i class="fab fa-telegram"></i>
+                            </span>
+                        </a>
+                        <a href="#" class="button is-small is-dark" aria-label="GitHub">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="has-background-grey">
+            <div class="has-text-centered has-text-grey-light">
+                <p>&copy; 2025 WebStudio Pro. Все права защищены.</p>
+                <p class="is-size-7">
+                    <a href="404.html" class="has-text-grey-light">Страница 404 для теста</a> • 
+                    <a href="#" class="has-text-grey-light">Политика конфиденциальности</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <button id="scrollToTop" class="button is-primary is-rounded" aria-label="Наверх">
+        <span class="icon">
+            <i class="fas fa-arrow-up"></i>
+        </span>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Бургер-меню
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.querySelector('.navbar-menu');
+            
+            if (burger && menu) {
+                burger.addEventListener('click', () => {
+                    burger.classList.toggle('is-active');
+                    menu.classList.toggle('is-active');
+                });
+            }
+
+            // Кнопка "Наверх"
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            
+            if (scrollToTopBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        scrollToTopBtn.style.display = 'block';
+                    } else {
+                        scrollToTopBtn.style.display = 'none';
+                    }
+                });
+
+                scrollToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Обработка формы
+            const contactForm = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    // Здесь можно добавить валидацию и отправку на сервер
+                    // Пока просто показываем сообщение об успехе
+                    
+                    // Скрываем сообщение, если оно уже было показано
+                    if (successMessage) {
+                        successMessage.classList.remove('is-hidden');
+                        
+                        // Прокрутка к сообщению
+                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        
+                        // Кнопка закрытия
+                        const closeButton = successMessage.querySelector('.delete');
+                        if (closeButton) {
+                            closeButton.addEventListener('click', () => {
+                                successMessage.classList.add('is-hidden');
+                            });
+                        }
+                        
+                        // Сброс формы
+                        contactForm.reset();
+                        
+                        // Автоматически скрыть через 5 секунд
+                        setTimeout(() => {
+                            successMessage.classList.add('is-hidden');
+                        }, 5000);
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
