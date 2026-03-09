@@ -1544,4 +1544,129 @@ body {
     .error-page {
         background-color: var(--color-bg);
     }
+
+    
+/* Стили для полей с ошибкой (Bulma совместимость) */
+.input.is-danger,
+.textarea.is-danger,
+.select.is-danger select,
+.select select.is-danger {
+    border-color: var(--color-error) !important;
+}
+
+.input.is-danger:focus,
+.textarea.is-danger:focus,
+.select.is-danger select:focus,
+.select select.is-danger:focus {
+    box-shadow: 0 0 0 0.125em rgba(231, 76, 60, 0.25) !important;
+}
+
+/* Сообщения об ошибках */
+.help.is-danger {
+    color: var(--color-error);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Улучшенная анимация для сообщения об успехе */
+.notification.is-success {
+    animation: slideInDown 0.5s ease-out;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для неактивной кнопки отправки (опционально) */
+.button.is-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Улучшение для select с ошибкой */
+.select.is-danger::after {
+    border-color: var(--color-error) !important;
+}
+
+/* Чекбокс с ошибкой */
+.checkbox.has-error {
+    color: var(--color-error);
+}
+
+.checkbox.has-error input {
+    box-shadow: 0 0 0 1px var(--color-error);
+}
+
+/* Подсветка обязательных полей */
+.label .has-text-danger {
+    font-size: 1.2em;
+    margin-left: 2px;
+}
+
+/* Стили для успешной валидации (опционально) */
+.input.is-success,
+.textarea.is-success {
+    border-color: var(--color-success);
+}
+
+.input.is-success:focus,
+.textarea.is-success:focus {
+    box-shadow: 0 0 0 0.125em rgba(39, 174, 96, 0.25);
+}
+
+/* Анимация появления ошибки */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+    20%, 40%, 60%, 80% { transform: translateX(2px); }
+}
+
+.input.is-danger {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Стили для подсказок под полями */
+.help {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    color: var(--color-text-light);
+    transition: color var(--transition-normal);
+}
+
+/* Контейнер для поля с иконкой и ошибкой */
+.field .control.has-icons-left {
+    position: relative;
+}
+
+.field .control.has-icons-left .help.is-danger {
+    margin-top: 0.5rem;
+    padding-left: 2rem; /* Отступ для иконки */
+}
+
+/* Стили для блока с сообщением об успешной отправке */
+#successMessage {
+    transition: all var(--transition-normal);
+}
+
+#successMessage.is-hidden {
+    display: none !important;
+}
+
+/* Кнопка закрытия уведомления */
+.notification .delete {
+    transition: opacity var(--transition-normal);
+}
+
+.notification .delete:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
 }

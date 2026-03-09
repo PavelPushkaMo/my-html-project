@@ -83,35 +83,38 @@
                         <div class="box">
                             <h2 class="title is-3 mb-5">Отправить сообщение</h2>
                             
-                            <form id="contactForm" action="#" method="post">
-                                <!-- Имя -->
+                            <!-- ИЗМЕНЕНО: id формы с contactForm на feedbackForm -->
+                            <form id="feedbackForm" action="#" method="post">
+                                <!-- ИЗМЕНЕНО: поле "Имя" заменено на "ФИО" для проверки на 2 слова -->
                                 <div class="field">
-                                    <label class="label">Ваше имя <span class="has-text-danger">*</span></label>
+                                    <label class="label">ФИО <span class="has-text-danger">*</span></label>
                                     <div class="control has-icons-left">
-                                        <input class="input" type="text" placeholder="Иван Иванов" id="name" required>
+                                        <input class="input" type="text" id="fullname" placeholder="Иванов Иван Иванович">
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-user"></i>
                                         </span>
                                     </div>
+                                    <p class="help" id="fullnameHelp">Введите фамилию, имя и отчество (минимум 2 слова)</p>
                                 </div>
 
-                                <!-- Email -->
+                                <!-- Email (без изменений, но добавлен help) -->
                                 <div class="field">
                                     <label class="label">Email <span class="has-text-danger">*</span></label>
                                     <div class="control has-icons-left">
-                                        <input class="input" type="email" placeholder="ivan@example.com" id="email" required>
+                                        <input class="input" type="email" id="email" placeholder="ivan@example.com">
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-envelope"></i>
                                         </span>
                                     </div>
+                                    <p class="help" id="emailHelp">Введите корректный email адрес</p>
                                 </div>
 
-                                <!-- Тема (выпадающий список) -->
+                                <!-- ИЗМЕНЕНО: добавлен id="subject" (был id="subject" - ок) -->
                                 <div class="field">
                                     <label class="label">Тема обращения <span class="has-text-danger">*</span></label>
                                     <div class="control">
                                         <div class="select is-fullwidth">
-                                            <select id="subject" required>
+                                            <select id="subject">
                                                 <option value="" disabled selected>Выберите тему</option>
                                                 <option value="project">Хочу заказать проект</option>
                                                 <option value="question">Вопрос по услугам</option>
@@ -120,30 +123,33 @@
                                             </select>
                                         </div>
                                     </div>
+                                    <p class="help" id="subjectHelp">Выберите тему обращения</p>
                                 </div>
 
-                                <!-- Сообщение -->
+                                <!-- ИЗМЕНЕНО: сообщение теперь необязательное (убрано required) -->
                                 <div class="field">
-                                    <label class="label">Сообщение <span class="has-text-danger">*</span></label>
+                                    <label class="label">Сообщение</label>
                                     <div class="control">
-                                        <textarea class="textarea" placeholder="Опишите ваш проект или задайте вопрос..." id="message" rows="6" required></textarea>
+                                        <textarea class="textarea" id="message" placeholder="Опишите ваш проект или задайте вопрос..." rows="6"></textarea>
                                     </div>
+                                    <p class="help" id="messageHelp">До 1000 символов (необязательно)</p>
                                 </div>
 
-                                <!-- Чекбокс согласия -->
+                                <!-- ИЗМЕНЕНО: id с "consent" на "agreement" (для соответствия скриптам) -->
                                 <div class="field">
                                     <div class="control">
                                         <label class="checkbox">
-                                            <input type="checkbox" id="consent" required>
+                                            <input type="checkbox" id="agreement" required>
                                             Я согласен на обработку <a href="#">персональных данных</a>
                                         </label>
                                     </div>
+                                    <p class="help" id="agreementHelp"></p>
                                 </div>
 
                                 <!-- Кнопка отправки -->
                                 <div class="field">
                                     <div class="control">
-                                        <button class="button is-primary is-large is-fullwidth" type="submit">
+                                        <button class="button is-primary is-large is-fullwidth" type="submit" id="submitBtn">
                                             <span class="icon">
                                                 <i class="fas fa-paper-plane"></i>
                                             </span>
@@ -153,7 +159,7 @@
                                 </div>
                             </form>
                             
-                            <!-- Сообщение об успешной отправке (скрыто по умолчанию) -->
+                            <!-- Сообщение об успешной отправке -->
                             <div id="successMessage" class="notification is-success is-hidden mt-4">
                                 <button class="delete"></button>
                                 <strong>Спасибо!</strong> Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.
@@ -161,7 +167,7 @@
                         </div>
                     </div>
 
-                    <!-- Контактная информация и карта -->
+                    <!-- Контактная информация и карта (без изменений) -->
                     <div class="column is-6">
                         <!-- Контактная информация -->
                         <div class="box">
@@ -234,9 +240,8 @@
         </section>
     </main>
 
-    <!-- ФУТЕР (такой же как на главной) -->
+    <!-- ФУТЕР -->
     <footer class="footer has-background-dark has-text-white">
-        <!-- ... (тот же футер, что в index.html) ... -->
         <div class="container">
             <div class="columns">
                 <div class="column is-4">
@@ -302,7 +307,11 @@
         </span>
     </button>
 
-    <!-- JavaScript -->
+    <!-- Подключение скриптов валидации и логгера -->
+    <script src="scripts/validation.js"></script>
+    <script src="scripts/consoleLogger.js"></script>
+    
+    <!-- JavaScript (только для бургер-меню и кнопки наверх) -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Бургер-меню
@@ -335,41 +344,12 @@
                     });
                 });
             }
-
-            // Обработка формы
-            const contactForm = document.getElementById('contactForm');
-            const successMessage = document.getElementById('successMessage');
             
-            if (contactForm) {
-                contactForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    
-                    // Здесь можно добавить валидацию и отправку на сервер
-                    // Пока просто показываем сообщение об успехе
-                    
-                    // Скрываем сообщение, если оно уже было показано
-                    if (successMessage) {
-                        successMessage.classList.remove('is-hidden');
-                        
-                        // Прокрутка к сообщению
-                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        
-                        // Кнопка закрытия
-                        const closeButton = successMessage.querySelector('.delete');
-                        if (closeButton) {
-                            closeButton.addEventListener('click', () => {
-                                successMessage.classList.add('is-hidden');
-                            });
-                        }
-                        
-                        // Сброс формы
-                        contactForm.reset();
-                        
-                        // Автоматически скрыть через 5 секунд
-                        setTimeout(() => {
-                            successMessage.classList.add('is-hidden');
-                        }, 5000);
-                    }
+            // Кнопка закрытия уведомления (для successMessage)
+            const deleteButton = document.querySelector('.notification .delete');
+            if (deleteButton) {
+                deleteButton.addEventListener('click', () => {
+                    deleteButton.parentElement.classList.add('is-hidden');
                 });
             }
         });
